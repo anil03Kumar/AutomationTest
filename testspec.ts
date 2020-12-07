@@ -27,6 +27,7 @@ describe('chain locators', function () {
         await browser.manage().window().maximize();
         await browser.get('https://angularjs.org/');
         await ah.linktext.click();
+        await browser.sleep(3000);
         await ah.search.sendKeys("hello");
         
     })
