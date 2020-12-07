@@ -1,7 +1,7 @@
 import {Config} from "protractor";
 
 // An example configuration file
-exports.config = {
+export let config = {
     // The address of a running selenium server.
    // seleniumAddress: 'http://localhost:4444/wd/hub',
 
