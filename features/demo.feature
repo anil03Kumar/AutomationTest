@@ -1,20 +1,26 @@
 Feature: I am going to validate the calculator Application
 
-Scenario: Calculator Add functionality
+Scenario Outline: Calculator Add functionality
 
 Given I will navigate to "Calc" page
-When I will add two numbers "3" and "5"
-Then the output displayed should be "8"
+When I will add two numbers "<num1>" and "<num2>"
+Then the output displayed should be "<result>"
 
-Scenario: Calculator Add functionality
+Examples:
+    | num1 | num2 | result |
+    | 3  | 5 | 8  |
+     | 6  | 4 | 10 |
+      | 9  | 9 | 18  |
 
-Given I will navigate to "Calc" page
-When I will add two numbers "6" and "4"
-Then the output displayed should be "10"
-
-Scenario: Validate Angular Web Page
+Scenario Outline: Validate Angular Web Page
 
 Given I will navigate to "AngularJS" page
 When I clicked on header link
 And You will navigate to angular page
-Then You will enter "hello" in search box
+Then You will enter "<key>" in search box
+
+Examples:
+    |  key | 
+    | hello |
+    | hey |
+    | hi |
