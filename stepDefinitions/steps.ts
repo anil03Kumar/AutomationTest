@@ -3,6 +3,10 @@ import { browser } from "protractor";
 import { AngularHomePage } from "../pageObjects/AngularHomePage.js";
 import {calculator} from "../pageObjects/calculator.js";
 
+import chai = require('chai');
+chai.use(require('chai-smoothie'));
+const expect = chai.expect;
+
 let calc=new calculator();
 let ah = new AngularHomePage();
 
@@ -22,6 +26,7 @@ Given('I will navigate to {string} page', async(string)=> {
 
 
 When('I clicked on header link',  async()=> {
+  await browser.sleep(3000);
   await ah.linktext.click();
   
 });
@@ -51,8 +56,10 @@ Then('You will enter {string} in search box', async(string)=> {
     await calc.go.click();
     await calc.getResult.getText().then(function (text) {
 
-        console.log(text);
+      console.log(text);
 
+      expect(true).to.be.true;
+     
     })
 
   });

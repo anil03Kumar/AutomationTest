@@ -13,19 +13,21 @@
   "author": "ANIL SHIVANNA",
   "license": "ISC",
   "dependencies": {
+    "@types/chai": "^4.2.14",
+    "@types/cucumber": "4.0.4",
     "@types/jasmine": "^3.6.0",
     "@types/node": "^14.14.6",
-    "jasmine": "^3.6.3",
-    "protractor": "^7.0.0",
-    "protractor-html-reporter-2": "^1.0.4",
-    "ts-node": "^9.0.0",
-    "typescript": "^4.0.5",
-    "protractor-cucumber-framework": "^6.2.1",
-    "cucumber": "^5.1.0",
-    "@types/cucumber": "4.0.4",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
+    "chai-smoothie": "^0.3.2",
+    "cucumber": "^5.1.0",
     "cucumber-html-reporter": "^5.2.0",
-    "jasmine-data-provider": "^2.2.0"
+    "jasmine": "^3.6.3",
+    "jasmine-data-provider": "^2.2.0",
+    "protractor": "^7.0.0",
+    "protractor-cucumber-framework": "^6.2.1",
+    "protractor-html-reporter-2": "^1.0.4",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
   }
 }
