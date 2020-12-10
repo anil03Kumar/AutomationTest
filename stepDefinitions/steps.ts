@@ -3,9 +3,12 @@ import { browser } from "protractor";
 import { AngularHomePage } from "../pageObjects/AngularHomePage.js";
 import {calculator} from "../pageObjects/calculator.js";
 
-import chai = require('chai');
-chai.use(require('chai-smoothie'));
-const expect = chai.expect;
+// import chai = require('chai');
+// chai.use(require('chai-smoothie'));
+// const expect = chai.expect;
+
+import chai from "chai";
+var expect = chai.expect;
 
 let calc=new calculator();
 let ah = new AngularHomePage();
@@ -58,7 +61,7 @@ Then('You will enter {string} in search box', async(string)=> {
 
       console.log(text);
 
-      expect(true).to.be.true;
+      expect(text).to.equal(string);
      
     })
 

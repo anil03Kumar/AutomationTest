@@ -7,7 +7,7 @@ When I will add two numbers "<num1>" and "<num2>"
 Then the output displayed should be "<result>"
 Examples:
     | num1 | num2 | result |
-    | 3  | 5 | 8  |
+    | 3  | 5 | 9  |
      | 6  | 4 | 10 |
       | 9  | 9 | 18  |
 

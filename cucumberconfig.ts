@@ -1,4 +1,6 @@
 import {Config} from "protractor";
+import * as reporter from 'cucumber-html-reporter';
+
 
 // An example configuration file
 export let config = {
@@ -20,9 +22,34 @@ export let config = {
     // They may include glob patterns.
     specs: ['../features/demo.feature'],
 
+    onComplete: () => {
+      var options = {
+              theme: 'bootstrap',
+              jsonFile: './cucumberreport.json',
+              output: './cucumberreport.html',
+              reportSuiteAsScenarios: true,
+              scenarioTimestamp: true,
+              launchReport: true,
+              metadata: {
+                  "Application": "Calcultor Angular Test",
+                  "Test Environment": "SYSTEM",
+                  "Browser": "Chrome  87",
+                  "Platform": "Windows 10",
+                  "Executed": "Automation"
+              }
+          };
+       
+          reporter.generate(options);
+          
+        },
+
     cucumberOpts: {
         // require step definitions
-        tags: '@calculatortesting',
+        // tags: '@calculatortesting',
+        format: 'json:./cucumberreport.json',
+        
+        
+
         require: [
           './stepDefinitions/*.js' // accepts a glob
         ]
